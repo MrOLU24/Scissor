@@ -1,0 +1,301 @@
+* {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+  color: var(--fsr-primary);
+}
+:root{
+    --color-pramary: #0065fe;
+}
+.form-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 32rem;
+  background: linear-gradient( rgb(30, 52, 72) 100%, rgba(30, 52, 72, 0)0%);
+  position: relative;
+}
+.form-section::before {
+  display: block;
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-image: url(https://scissorcut.vercel.app/images/vector_bg_before.svg),
+    url(https://scissorcut.vercel.app/images/vector_bg_before2.svg),
+    url(https://scissorcut.vercel.app/images/vector_bg_before3.svg);
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+.form-section::after {
+  display: block;
+  content: "";
+  position: absolute;
+  background: url(https://scissorcut.vercel.app/images/vector_bg_after.svg) no-repeat bottom right,  url(https://scissorcut.vercel.app/images/vector_bg_after2.svg) no-repeat bottom right;
+  /* bottom: 0;
+  right: 0; */
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+/* main form styling */
+.form-section form{
+    width: 29.7rem;
+    background-color: white;
+    padding: 3rem;
+    border-radius: 12px;
+    position: relative;
+    z-index: 99;
+}
+.form-section form{
+    input, select, button{
+        width: 100%;
+        font-size: 0.8rem;
+        height: 55px;
+        border: 1px solid #3284ff;
+        padding-left: 1rem;
+        border-radius: 12px;
+        outline: none;
+        color: #0065fe;
+    }
+}
+.input-wrapper{
+    width: 100%;
+    margin: 1.5rem 0;
+}
+.deflex{
+   display: flex;
+}
+.degap{
+    gap: 10px;
+}
+.input{
+    width: 50%;
+}
+.form-section .set-URL{
+    background-color: #3284ff;
+    color: white;
+    margin-bottom: 2rem;
+    border-radius: 25px;
+}
+.form-section form{
+    p, b{
+        color: var(--color-pramary);
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+}
+.form-section input::placeholder{
+    color: #0065fe;
+}
+/* FAQ */
+.faq-contain{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 4rem;
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 5rem;
+    padding-bottom: 7rem;
+}
+.faq-contain h2{
+    font-size: 2.5rem;
+    position: relative;
+}
+.faq-contain h2::before{
+    display: block;
+    content: "";
+    position: absolute;
+    width: .4rem;
+    height: 3rem;
+    background: linear-gradient(#112232, #4d6b88, #4d6b8819);
+    left: -1rem;
+}
+.defaq-container{
+    max-width: 600px;
+    margin: 0 auto;
+}
+.faq{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem 0;
+    /* border-radius: 5px; */
+    border-bottom: 1px solid #aaa9a9;
+    overflow: hidden;
+}
+.faq-Q{
+    cursor: pointer;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between; /* Align text and icon */
+    align-items: center;
+}
+.faq-answer {
+    padding: 0 15px; /* Only horizontal padding for collapsed answers */
+    background-color: #fff;
+    max-height: 0; /* Initially hidden */
+    overflow: hidden;
+    transition: 0.3s ease, padding 0.3s ease; /* Smooth slide */
+}
+.faq.active .faq-answer{
+    max-height: 150px;
+    padding: 15px;
+}
+/* Icon animation */
+.faq-icon {
+    font-size: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.faq.active .faq-icon {
+    transform: rotate(35deg);
+}
+.faq .faq-Q h5{
+    font-size: 1rem;
+    font-weight: 500;
+} 
+.optimazation{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    width: 100%;
+    height: 25rem;
+    position: relative;
+    margin-bottom: 4rem;
+    overflow: hidden;
+    background: linear-gradient(180deg, #1e3448 99.99%, #1e344800);
+}
+.optimazation::before{
+    content: "";
+    position: absolute;
+    width: 35rem;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-image: url(https://scissorcut.vercel.app/images/link_opt_bg_before.svg), url(https://scissorcut.vercel.app/images/link_opt_bg_before2.svg), url(https://scissorcut.vercel.app/images/link_opt_bg_before3.svg);
+    background-repeat: no-repeat;
+}
+.optimazation::after{
+    display: block;
+    content: "";
+    position: absolute;
+    background: url(https://scissorcut.vercel.app/images/link_opt_bg_after.svg) no-repeat bottom right,url(https://scissorcut.vercel.app/images/link_opt_bg_after2.svg) no-repeat bottom right,  url(https://scissorcut.vercel.app/images/link_opt_bg_after3.svg) no-repeat bottom right;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+.optimazation h2{
+    color: var( --fsr-secondary);
+    font-size: 3rem;
+    font-weight: 550;
+    z-index: 1;
+}
+.optimazation button{
+    font-size: 1rem;
+    color: var(  --fsr-ready);
+    width: 12rem;
+    background-color: var(--color-pramary);
+    border: none;
+    line-height: 3rem;
+    border-radius: 1.5rem;
+    z-index: 1;
+}
+footer{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 2rem;
+    padding: 2rem 10% 4em;
+    position: relative;
+}
+footer::before{
+    display: block;
+    content: "";
+    width: 30rem;
+    height: 30rem;
+    position: absolute;
+    background-image:url(https://scissorcut.vercel.app/images/ftr_vector3.svg),
+    url(https://scissorcut.vercel.app/images/ftr_vector2.svg),  url(https://scissorcut.vercel.app/images/ftr_vector1.svg);
+    background-repeat: no-repeat;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+}
+footer::after{
+    display: block;
+    content: "";
+    position: absolute;
+    background: url(https://scissorcut.vercel.app/images/ftr_vector4.svg) no-repeat bottom right,  url(https://scissorcut.vercel.app/images/ftr_vector5.svg) no-repeat bottom right, url(https://scissorcut.vercel.app/images/ftr_vector6.svg) no-repeat bottom right;
+    /* bottom: 0;
+    right: 0; */
+    top: 0;
+    right: 0;
+    width: 30rem;
+    height: 100%;
+    z-index: 1;
+}
+.foot-wrapper{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    z-index: 1;
+}
+.foot-wrapper .social{
+    display: flex;
+    flex-direction: column;
+    width: 11.5rem;
+    height: 6rem;
+    justify-content: space-between;
+}
+.social .footer-img{
+    min-width: 10rem;
+    min-height: 2.5rem;
+    filter: brightness(0) saturate(100%) invert(0%) sepia(41%) saturate(415%) hue-rotate(331deg) brightness(92%) contrast(84%); 
+}
+.social .social-link{
+    display: inherit;
+    justify-content: space-around;
+    width: 100%;
+    align-items: center;
+}
+.delist{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 11.5rem 1fr;
+    gap: 2.5rem;
+    row-gap: 2.5rem;
+    column-gap: 2.5rem;
+}
+.delist div ul li{
+    font-size: 1rem;
+    list-style: none;
+    line-height: 1.5rem;
+}
+.delist div{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 11rem;
+}
+.delist div h5{
+    font-size: 1rem;
+    font-weight: 700;
+}
+.foot-two{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 1rem;
+    z-index: 1;
+}
+.foot-two .services, .security{
+    border-right: 2px solid #141414;
+    padding-right: 1rem;
+}
